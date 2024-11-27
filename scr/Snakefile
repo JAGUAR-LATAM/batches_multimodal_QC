@@ -1,0 +1,16 @@
+
+configfile: config.yaml
+
+rule CITE_QC:
+	input:
+		"batch1.h5ad"
+	output:
+		"outputFile.txt"
+	params:
+	shell: "Rscript CITE_QC.R {input} {output}" 
+
+
+rule RNA_QC:
+	input:
+	output:
+	shell: 
